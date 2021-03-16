@@ -4,32 +4,66 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <base href="/" />
-    <link rel="stylesheet" href="form.css" />
+    <link rel="stylesheet" href="/style.css" />
     <title>Practice Frontend</title>
   </head>
   <body>
-    <div class="main-container">
-      <div class="form-container">
-        <form>
-          <div class="field-container">
-            <div class="text-field">
-              <label for="name">Name</label><br />
-              <input type="text" id="name" name="name" />
-            </div>
-
-            <div class="text-field">
-              <label for="username">Username</label><br />
-              <input type="text" id="username" name="username" />
-            </div>
+    <div class="container">
+      <form class="form">
+        <div class="form-group">
+          <div class="form-field">
+            <input
+              type="text"
+              id="fname"
+              name="fname"
+              autocomplete="off"
+              placeholder="John"
+            />
+            <label for="fname" class="label">
+              <span class="content-name">First Name</span>
+            </label>
           </div>
-
-          <div class="text-field">
-            <label for="email">Email</label><br />
-            <input type="text" id="email" name="email" />
+          <div class="form-field">
+            <input
+              type="text"
+              id="lname"
+              name="lname"
+              autocomplete="off"
+              placeholder="Doe"
+            />
+            <label for="lname" class="label">
+              <span class="content-name">Last Name</span>
+            </label>
           </div>
-        </form>
-      </div>
+        </div>
+        <div class="form-group">
+          <div class="form-field">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="off"
+              placeholder="example@example.com"
+            />
+            <label for="email" class="label">
+              <span class="content-name">Email</span>
+            </label>
+          </div>
+          <div class="form-field">
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              autocomplete="off"
+              placeholder="123-456-7890"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            />
+            <label for="phone" class="label">
+              <span class="content-name">Phone</span>
+            </label>
+          </div>
+        </div>
+      </form>
     </div>
   </body>
 </html>
