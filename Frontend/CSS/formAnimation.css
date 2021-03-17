@@ -1,0 +1,86 @@
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  width: 80%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+.form-group {
+  width: 90%;
+  height: 25%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-field {
+  width: 100%;
+  height: 70%;
+  margin: 10px;
+  position: relative;
+  overflow: hidden;
+}
+::placeholder {
+  color: lightgrey;
+}
+
+.form-field input {
+  width: 100%;
+  height: 100%;
+  color: #595f6e;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  font-size: 20px;
+  border: none;
+  outline: none;
+}
+
+.form-field label {
+  position: absolute;
+  bottom: 0px;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  font-weight: bold;
+  font-size: 14px;
+  border-bottom: 3px solid lightgrey;
+}
+
+.form-field label::after {
+  content: '';
+  position: absolute;
+  left: 0px;
+  bottom: -3px;
+  height: 100%;
+  width: 100%;
+  border-bottom: 3px solid rgb(83, 19, 202);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.content-name {
+  position: absolute;
+  color: black;
+  transition: all 0.3s ease;
+}
+
+.form-field input:focus + .label .content-name {
+  color: rgb(83, 19, 202);
+}
+
+.form-field input:focus + label::after {
+  transform: translateX(0%);
+}
