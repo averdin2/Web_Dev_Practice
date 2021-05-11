@@ -40,9 +40,9 @@ input[type='text']:focus {
   align-items: center;
 }
 
-.form-container {
-  /* width: 80vw; */
-}
+/* .form-container {
+  width: 80vw;
+} */
 
 .field-container {
   display: flex;
